@@ -26,7 +26,6 @@ export default async function DigitalIdPage({
       <MemberCard
         displayName={member.displayName}
         graduationYear={member.graduationYear}
-        department={member.department}
         memberNumber={member.memberNumber}
         validUntil={member.validUntil}
         photoUrl={`/api/photo/${member.publicToken}`}

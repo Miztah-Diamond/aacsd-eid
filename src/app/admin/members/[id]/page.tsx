@@ -31,7 +31,6 @@ export default async function MemberDetailPage({
       <dl className="mt-6 space-y-2 rounded-xl border border-navy/10 bg-white p-5 text-sm">
         <Row label="Status" value={member.status} />
         <Row label="Graduation year" value={String(member.graduationYear)} />
-        <Row label="Department" value={member.department} />
         <Row label="Valid until" value={formatDate(member.validUntil)} />
         <Row label="Card URL" value={cardUrl(member.publicToken)} href={cardUrl(member.publicToken)} />
         <Row label="Verify URL" value={verifyUrl(member.publicToken)} href={verifyUrl(member.publicToken)} />

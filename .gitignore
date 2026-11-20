@@ -34,6 +34,8 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+.env.hostinger*
+.env.migrate.tmp
 !.env.example
 
 # local data
@@ -49,3 +51,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# deploy artifacts
+*.zip
+.devco/
+

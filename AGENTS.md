@@ -7,7 +7,7 @@ Digital membership ID for Alumni Association of Chinese Studies Department Unizi
 - URL: `https://AACSD.techzoid.ng`
 - One admin account only
 - Card: photo, name, graduation year, department, membership no., valid until, QR + Code 128
-- Motto: Discipline · Excellence · Self Reliance
+- Motto: Connecting minds, building future
 - Hostinger Managed Node + MySQL (photos in DB; filesystem is wiped on redeploy)
 
 ## Rules

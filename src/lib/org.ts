@@ -4,8 +4,8 @@ export const ORG = {
   address: "Chinese department, Faculty of Arts, Nnamdi Azikiwe University, Awka",
   phone: "09133951344",
   email: "chsalumniunizik@gmail.com",
-  motto: "Discipline · Excellence · Self Reliance",
-  mottoUpper: "DISCIPLINE · EXCELLENCE · SELF RELIANCE",
+  motto: "Connecting minds, building future",
+  mottoUpper: "CONNECTING MINDS, BUILDING FUTURE",
   defaultDepartment: "Chinese Studies",
   productionHost: "AACSD.techzoid.ng",
 } as const;

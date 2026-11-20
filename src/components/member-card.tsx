@@ -5,7 +5,6 @@ import { formatDate } from "@/lib/format";
 type Props = {
   displayName: string;
   graduationYear: number;
-  department: string;
   memberNumber: string;
   validUntil: Date;
   photoUrl: string;
@@ -17,7 +16,6 @@ type Props = {
 export function MemberCard({
   displayName,
   graduationYear,
-  department,
   memberNumber,
   validUntil,
   photoUrl,
@@ -69,7 +67,6 @@ export function MemberCard({
           <dl className="space-y-3 text-sm sm:text-base">
             <Field label="Name" value={displayName} />
             <Field label="Graduation Year" value={String(graduationYear)} />
-            <Field label="Department" value={department} />
             <Field label="Membership No." value={memberNumber} />
             <Field label="Valid Until" value={formatDate(validUntil)} />
           </dl>

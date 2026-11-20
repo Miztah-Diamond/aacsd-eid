@@ -50,7 +50,6 @@ const createSchema = z.object({
   displayName: z.string().trim().min(2).max(120),
   memberNumber: z.string().trim().min(2).max(40),
   graduationYear: z.coerce.number().int().min(1950).max(2100),
-  department: z.string().trim().min(2).max(120),
   validUntil: z.string().min(1),
   status: z.enum(["ACTIVE", "INACTIVE"]).default("ACTIVE"),
 });
@@ -62,7 +61,6 @@ export async function createMemberAction(formData: FormData) {
     displayName: formData.get("displayName"),
     memberNumber: formData.get("memberNumber"),
     graduationYear: formData.get("graduationYear"),
-    department: formData.get("department") || ORG.defaultDepartment,
     validUntil: formData.get("validUntil"),
     status: formData.get("status") || "ACTIVE",
   });
@@ -98,7 +96,7 @@ export async function createMemberAction(formData: FormData) {
       displayName: parsed.data.displayName,
       memberNumber: parsed.data.memberNumber,
       graduationYear: parsed.data.graduationYear,
-      department: parsed.data.department,
+      department: ORG.defaultDepartment,
       validUntil: new Date(parsed.data.validUntil),
       status: parsed.data.status as MemberStatusValue,
       publicToken,

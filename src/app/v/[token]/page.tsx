@@ -74,7 +74,6 @@ export default async function VerifyPage({
           <Row label="Name" value={member.displayName} />
           <Row label="Membership No." value={member.memberNumber} />
           <Row label="Graduation year" value={String(member.graduationYear)} />
-          <Row label="Department" value={member.department} />
           <Row label="Valid until" value={formatDate(member.validUntil)} />
         </dl>
       </div>

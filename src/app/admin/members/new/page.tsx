@@ -15,7 +15,7 @@ export default async function NewMemberPage() {
       </Link>
       <h1 className="mt-4 text-2xl font-semibold text-navy">Create membership ID</h1>
       <p className="mb-6 text-sm text-muted">{ORG.fullName}</p>
-      <CreateMemberForm defaultDepartment={ORG.defaultDepartment} />
+      <CreateMemberForm />
     </main>
   );
 }

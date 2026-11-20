@@ -9,7 +9,7 @@ async function action(_prev: State, formData: FormData): Promise<State> {
   return createMemberAction(formData);
 }
 
-export function CreateMemberForm({ defaultDepartment }: { defaultDepartment: string }) {
+export function CreateMemberForm() {
   const [state, formAction, pending] = useActionState(action, undefined);
   const year = new Date().getFullYear();
 
@@ -27,12 +27,6 @@ export function CreateMemberForm({ defaultDepartment }: { defaultDepartment: str
         type="number"
         required
         defaultValue={String(year)}
-      />
-      <Field
-        label="Department"
-        name="department"
-        required
-        defaultValue={defaultDepartment}
       />
       <Field label="Valid until" name="validUntil" type="date" required />
 
