@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --aacsd-navy: #0a2a6b;
+  --aacsd-orange: #f36c00;
+  --aacsd-white: #ffffff;
+  --aacsd-muted: #5b6b7c;
+  --aacsd-sand: #f5f7fb;
+  --background: var(--aacsd-sand);
+  --foreground: var(--aacsd-navy);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-navy: var(--aacsd-navy);
+  --color-orange: var(--aacsd-orange);
+  --color-muted: var(--aacsd-muted);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-source-serif);
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(243, 108, 0, 0.12), transparent 55%),
+    radial-gradient(900px 400px at 100% 0%, rgba(10, 42, 107, 0.1), transparent 50%),
+    var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-source-serif), Georgia, serif;
+}
+
+.card-shell {
+  background: var(--aacsd-white);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(10, 42, 107, 0.12);
+  border: 1px solid rgba(10, 42, 107, 0.08);
+}
+
+.card-wave {
+  background: linear-gradient(135deg, #0a2a6b 0%, #123f8f 60%, #0a2a6b 100%);
+  clip-path: ellipse(120% 100% at 50% 100%);
 }
