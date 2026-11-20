@@ -81,3 +81,35 @@ Original product lock was one admin only. User explicitly overrode: two admins n
 **Changes:**
 - ORG.motto / mottoUpper -> Connecting minds, building future
 - Removed Department from create form, card, verify, admin detail (DB default kept)
+
+## [2026-11-20 23:55 UTC] Task: Slogan + remove Department UI + redeploy (done)
+
+**ID:** TASK-20261120-AACSD-SLOGAN-DEPT
+**Request:** Slogan Connecting minds, building future; commit/deploy; include Department field removal
+**Status:** DONE
+**Commit:** ad8ba1c70128bf442c27767ada62bbc8a824a436 (pushed origin/master)
+**Deploy:** Hostinger aacsd-redeploy4.zip Completed + Current (2026-11-20 23:53:24)
+**Verify:** https://aacsd.techzoid.ng footer shows Connecting minds, building future; /api/health ok
+**Files:** src/lib/org.ts, AGENTS.md, create-form/member-card/id/v/admin detail (Department UI removed; create still writes ORG.defaultDepartment)
+
+---
+
+## [2026-11-21 00:16 UTC] Task: Footer Sponsored by Techzoid + redeploy
+
+**ID:** TASK-20261121-AACSD-FOOTER-SPONSOR
+**Request:** Footer says Sponsored by techzoidinnovation.com; commit and deploy
+**Status:** DONE
+**Roles:** fullstack-engineer, devops-engineer, technical-documentation-engineer
+
+### Summary
+Added Sponsored by techzoidinnovation.com (link to https://techzoidinnovation.com) in SiteFooter only. Kept org contact + motto. Not on card face.
+
+### Deploy
+- Artifact: aacsd-redeploy5.zip / aacsd-eid-20261121-redeploy5.zip (Linux-safe paths)
+- Hostinger: Deployment completed for aacsd.techzoid.ng (manual zip; redeploy5 now previous files)
+- Smoke: landing 200; footer Sponsored by + techzoidinnovation.com; motto present; /api/health ok
+
+### Files
+- src/components/site-footer.tsx
+- docs/TASK-LOG.md, docs/DEPLOY-LOG.md, .devco/memory/*
+

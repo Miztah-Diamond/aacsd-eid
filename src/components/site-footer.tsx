@@ -16,6 +16,17 @@ export function SiteFooter() {
           </a>
         </p>
         <p className="pt-2 text-navy/70">{ORG.motto}</p>
+        <p className="pt-2">
+          Sponsored by{" "}
+          <a
+            className="hover:text-orange"
+            href="https://techzoidinnovation.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            techzoidinnovation.com
+          </a>
+        </p>
       </div>
     </footer>
   );
